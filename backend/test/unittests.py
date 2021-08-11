@@ -120,7 +120,6 @@ class FetchPointsTests(unittest.TestCase):
         url = "http://localhost:3001/api/spend-points"
         data = {"points": 1500}
         resp = requests.post(url, json=data)
-        print("BREAK 1", resp.json())
 
         expected_result = {
             "err": "Not enough points"
