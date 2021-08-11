@@ -1,6 +1,6 @@
 # Fetch Points
 
-This application is built to the specifications of the Fetch Rewards Coding Exercise challenge. This has only been tested on Ubuntu 20.04.
+This application is built to the specifications of the Fetch Rewards Coding Exercise challenge. This has only been tested on Ubuntu 20.04 and is written using NodeJS utilizing Express as well as Python for Unit Testing.
 
 ## API Calls
 
