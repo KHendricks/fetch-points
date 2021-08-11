@@ -24,6 +24,19 @@ module.exports = class FetchController {
 
   spendPoints(points, res, next) {
     fetchModel
+      .find()
+      .then((data) => {
+        let pointTotal = 0;
+        for (var i = 0; i < data.length; i++) {
+          pointTotal += data[i].points;
+        }
+
+        if (pointTotal < points) {
+          res.json({ err: "Not enough points" });
+        }
+      })
+      .catch((err) => console.log(err));
+    fetchModel
       .find({})
       .sort({ timestamp: "asc" })
       .then((data) => {
@@ -83,6 +96,13 @@ module.exports = class FetchController {
         }
         res.json(returnData);
       })
+      .catch((err) => console.log(err));
+  }
+
+  clearCollection(res) {
+    fetchModel
+      .deleteMany({})
+      .then(() => res.send("Dropped collection"))
       .catch((err) => console.log(err));
   }
 };

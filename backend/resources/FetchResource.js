@@ -22,5 +22,9 @@ module.exports = class FetchResource {
     this.router.get("/get-balances", (req, res) => {
       this.fetchController.getBalances(res);
     });
+
+    this.router.delete("/clear", (req, res) => {
+      this.fetchController.clearCollection(res);
+    });
   }
 };
