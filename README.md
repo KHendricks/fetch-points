@@ -35,7 +35,7 @@ https://docs.docker.com/compose/install/
 ## Running the Application
 
 1. Clone the repo to your machine
-2. From the root directory run docker compose to build and run the containers
+2. From the project's root directory run docker compose to build and run the containers
 
    `sudo docker-compose up --build`
 
